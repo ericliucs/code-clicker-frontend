@@ -1,0 +1,62 @@
+@import "tailwindcss" important;
+/* npx @tailwindcss/cli -i ../src/App.css -o ../src/output.css --watch */
+
+@font-face {
+    font-family: "Inter";
+    src: url("../public/fonts/Inter.ttf");
+}
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+}
+
+.clicker {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#app {
+    background: repeating-linear-gradient(
+            90deg,
+            #002666,
+            #002666 180px,
+            #000a5e 180px,
+            #000a5e 360px
+    )
+}
+
+/* Animation for the floating text */
+@keyframes float-up {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.animate-float-up {
+    animation: float-up 1s ease-out forwards;
+}
+
+/* Animation for Eureka Moment pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
