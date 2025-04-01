@@ -41,5 +41,3 @@ export const loadGame = () => {
 export const getLeaderboard = () => {
   return api.get("/leaderboard");
 };
-
-export default api;
