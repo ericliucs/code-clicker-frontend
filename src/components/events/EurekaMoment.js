@@ -17,9 +17,10 @@ export default function EurekaMoment() {
 
   const eurekaMomentTexts = [
     "Eureka!",
-    "Great idea!",
+    "A great idea!",
     "A breakthrough idea!",
     "Finally found that bug!",
+    "A burst of inspiration!"
   ];
 
   useEffect(() => {
@@ -33,9 +34,7 @@ export default function EurekaMoment() {
   }, [clickPopups]);
 
   useEffect(() => {
-    // TODO: Remember to remove this and set real random delay
-    const initialDelay = 100;
-    // const initialDelay = Math.random() * 10000 + 5000;
+    const initialDelay = Math.random() * 10000 + 5000;
     appearTimerRef.current = setTimeout(makeAppear, initialDelay);
 
     return () => {
