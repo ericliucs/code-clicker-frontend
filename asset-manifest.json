@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/code-clicker-frontend/static/css/main.d56dc9ae.css",
-    "main.js": "/code-clicker-frontend/static/js/main.38b8b758.js",
+    "main.js": "/code-clicker-frontend/static/js/main.37a2a702.js",
     "static/js/488.8cdf0e85.chunk.js": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js",
     "static/media/Inter.ttf": "/code-clicker-frontend/static/media/Inter.e05c5f3d1fa6a3893d84.ttf",
     "static/media/laptop-clicker.png": "/code-clicker-frontend/static/media/laptop-clicker.3e64702ad5d9bb183e10.png",
@@ -12,11 +12,11 @@
     "static/media/typing-speed.png": "/code-clicker-frontend/static/media/typing-speed.4bb51e0f6f3e6be2ae7d.png",
     "index.html": "/code-clicker-frontend/index.html",
     "main.d56dc9ae.css.map": "/code-clicker-frontend/static/css/main.d56dc9ae.css.map",
-    "main.38b8b758.js.map": "/code-clicker-frontend/static/js/main.38b8b758.js.map",
+    "main.37a2a702.js.map": "/code-clicker-frontend/static/js/main.37a2a702.js.map",
     "488.8cdf0e85.chunk.js.map": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d56dc9ae.css",
-    "static/js/main.38b8b758.js"
+    "static/js/main.37a2a702.js"
   ]
 }
