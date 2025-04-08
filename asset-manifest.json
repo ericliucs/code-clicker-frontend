@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/code-clicker-frontend/static/css/main.d56dc9ae.css",
-    "main.js": "/code-clicker-frontend/static/js/main.40738724.js",
+    "main.js": "/code-clicker-frontend/static/js/main.2b77d5cf.js",
     "static/js/488.8cdf0e85.chunk.js": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js",
     "static/media/Inter.ttf": "/code-clicker-frontend/static/media/Inter.e05c5f3d1fa6a3893d84.ttf",
     "static/media/laptop-clicker.png": "/code-clicker-frontend/static/media/laptop-clicker.3e64702ad5d9bb183e10.png",
     "static/media/keyboard-click.mp3": "/code-clicker-frontend/static/media/keyboard-click.ddbb51cd5f26c3818bc0.mp3",
+    "static/media/upgrade.mp3": "/code-clicker-frontend/static/media/upgrade.4b2c257b8d76fa1d63fa.mp3",
     "static/media/eureka-moment.mp3": "/code-clicker-frontend/static/media/eureka-moment.65b225a9d9d12a811818.mp3",
     "static/media/youtube-logo.png": "/code-clicker-frontend/static/media/youtube-logo.3d7d09a9f4fcd641de27.png",
     "static/media/typing-speed.png": "/code-clicker-frontend/static/media/typing-speed.4bb51e0f6f3e6be2ae7d.png",
     "index.html": "/code-clicker-frontend/index.html",
     "main.d56dc9ae.css.map": "/code-clicker-frontend/static/css/main.d56dc9ae.css.map",
-    "main.40738724.js.map": "/code-clicker-frontend/static/js/main.40738724.js.map",
+    "main.2b77d5cf.js.map": "/code-clicker-frontend/static/js/main.2b77d5cf.js.map",
     "488.8cdf0e85.chunk.js.map": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d56dc9ae.css",
-    "static/js/main.40738724.js"
+    "static/js/main.2b77d5cf.js"
   ]
 }
