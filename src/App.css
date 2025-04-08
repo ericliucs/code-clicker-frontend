@@ -1,5 +1,4 @@
-@import "tailwindcss" important;
-/* npx @tailwindcss/cli -i ../src/App.css -o ../src/output.css --watch */
+@import "tailwindcss";
 
 @font-face {
     font-family: "Inter";
@@ -11,12 +10,27 @@
 }
 
 .clicker {
+    /* Prevent dragging */
     user-drag: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+
+    /* Prevent selection */
     user-select: none;
     -moz-user-select: none;
-    -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+
+    /* Prevent touch actions that might interfere with clicking */
+    touch-action: manipulation;
+
+    /* Prevent highlighting */
+    -webkit-tap-highlight-color: transparent;
+
+    /* Make sure the cursor is always a pointer */
+    cursor: pointer !important;
 }
 
 #app {

@@ -38,6 +38,12 @@ export default function LaptopClicker() {
     LoCDispatch({ type: "increase", amount: LoCPerClick });
   };
 
+  // Prevent dragging
+  const preventDrag = (e) => {
+    e.preventDefault();
+    return false;
+  };
+
   return (
     <div className="relative">
       <img
@@ -45,13 +51,24 @@ export default function LaptopClicker() {
         src={laptopClickerImage}
         alt="Computer clicker button."
         onClick={handleClick}
+        onDragStart={preventDrag}
+        onMouseDown={preventDrag}
+        draggable="false"
+        style={{
+          WebkitUserDrag: "none",
+          KhtmlUserDrag: "none",
+          MozUserDrag: "none",
+          OUserDrag: "none",
+          userDrag: "none",
+          touchAction: "manipulation" // Helps with mobile devices
+        }}
       />
 
       {/* Render all active popups */}
       {clickPopups.map((popup) => (
         <div
           key={popup.id}
-          className="absolute pointer-events-none font-bold text-xl animate-float-up"
+          className="absolute pointer-events-none font-bold text-2xl animate-float-up"
           style={{
             left: `${popup.x}px`,
             top: `${popup.y}px`,

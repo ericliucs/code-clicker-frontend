@@ -39,7 +39,7 @@ const initialUpgrades = new Map([
       src: youtubeLogo,
       alt: "The Watch YouTube Video II upgrade.",
       description:
-        "<p>You gain +0.1 LoC/s.</p>" +
+        "<p>You gain +0.2 LoC/s.</p>" +
         "<p><i>These YouTube videos have been pretty handy! Now you can form all of your" +
         " opinions based solely on what tech influencers say. Just like every good" +
         " programmer!</i></p>",
@@ -48,13 +48,33 @@ const initialUpgrades = new Map([
       purchased: false,
       effects: [
         {
-          increaseLoCPerSecond: 0.5,
+          increaseLoCPerSecond: 0.2,
         },
       ],
     },
   ],
   [
     3,
+    {
+      name: "Watch YouTube Video III",
+      src: youtubeLogo,
+      alt: "The Watch YouTube Video III upgrade.",
+      description:
+        "<p>You gain +0.2 LoC/s.</p>" +
+        "<p><i>Your recommeded sections are nothing but coding videos. There's no room for" +
+        " anything else. The YouTube algorithm has you now.</i></p>",
+      cost: Big(400),
+      visible: true,
+      purchased: false,
+      effects: [
+        {
+          increaseLoCPerSecond: 0.2,
+        },
+      ],
+    },
+  ],
+  [
+    4,
     {
       name: "Learn Basic Typing",
       src: typingSpeed,
@@ -74,7 +94,7 @@ const initialUpgrades = new Map([
     },
   ],
   [
-    4,
+    5,
     {
       name: "Improve Typing",
       src: typingSpeed,
@@ -90,6 +110,87 @@ const initialUpgrades = new Map([
       effects: [
         {
           increaseLoCOnClick: Big(0.5),
+        },
+      ],
+    },
+  ],
+  [
+    6,
+    {
+      name: "Clean Typing",
+      src: typingSpeed,
+      alt: "The Clean Typing upgrade.",
+      description:
+        "<p>You gain +0.5 LoC every click.</p>" +
+        "<p><i>Congratulations on being able to type at an average speed! You've joined" +
+        " the prestigious few who can type with all of their fingers - the top... 88% of" +
+        " people. Oh.</i></p>",
+      cost: Big(3000),
+      visible: true,
+      purchased: false,
+      effects: [
+        {
+          increaseLoCOnClick: Big(0.5),
+        },
+      ],
+    },
+  ],
+  [
+    7,
+    {
+      name: "No Look Typing",
+      src: typingSpeed,
+      alt: "The No Look Typing upgrade.",
+      description:
+        "<p>You gain +0.5 LoC every click.</p>" +
+        "<p><i>You've gotten familiar enough to keep your eyes on the screen instead of" +
+        " looking down at your keyboard. Look ma, no eyes!</i></p>",
+      cost: Big(5000),
+      visible: true,
+      purchased: false,
+      effects: [
+        {
+          increaseLoCOnClick: Big(0.5),
+        },
+      ],
+    },
+  ],
+  [
+    8,
+    {
+      name: "Speed Typing I",
+      src: typingSpeed,
+      alt: "The Speed Typing I upgrade.",
+      description:
+        "<p>You gain +1 LoC every click.</p>" +
+        "<p><i>You've gotten so fast that you can now impress everyone around you! At" +
+        " least, that's what you think. In reality, you just annoy people in libraries.</i></p>",
+      cost: Big(10000),
+      visible: true,
+      purchased: false,
+      effects: [
+        {
+          increaseLoCOnClick: Big(1),
+        },
+      ],
+    },
+  ],
+  [
+    9,
+    {
+      name: "Speed Typing II",
+      src: typingSpeed,
+      alt: "The Speed Typing II upgrade.",
+      description:
+        "<p>You gain +1 LoC every click.</p>" +
+        "<p><i>Your blazing speed has started to wear down the keys on your keyboard. No" +
+        " matter. You've stocked up a drawer full of replacement keycaps.</i></p>",
+      cost: Big(15000),
+      visible: true,
+      purchased: false,
+      effects: [
+        {
+          increaseLoCOnClick: Big(1),
         },
       ],
     },
