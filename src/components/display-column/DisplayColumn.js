@@ -2,6 +2,7 @@ import SaveButton from "./SaveButton";
 import LoadButton from "./LoadButton";
 import LoginButton from "./LoginButton";
 import Leaderboard from "./Leaderboard";
+import SettingsButton from "./SettingsButton";
 
 export default function DisplayColumn() {
   return (
@@ -9,6 +10,7 @@ export default function DisplayColumn() {
       <LoginButton />
       <SaveButton />
       <LoadButton />
+      <SettingsButton />
       <Leaderboard />
     </div>
   );

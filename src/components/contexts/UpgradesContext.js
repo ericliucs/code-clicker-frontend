@@ -2,11 +2,12 @@ import { createContext, useContext, useReducer } from "react";
 
 import { useLoC, useLoCDispatch } from "./LoCContext";
 import { useLoCPerSecondDispatch } from "./LoCPerSecondContext";
-import Big from "big.js";
+import { useLoCOnClickDispatch } from "./LoCOnClickContext";
 
+import Big from "big.js";
+import soundManager from "../../managers/SoundManager";
 import youtubeLogo from "../../assets/images/upgrades/youtube-logo.png";
 import typingSpeed from "../../assets/images/upgrades/typing-speed.png";
-import { useLoCOnClickDispatch } from "./LoCOnClickContext";
 
 export const UpgradesContext = createContext(new Map());
 export const UpgradesDispatchContext = createContext(null);
@@ -209,6 +210,7 @@ export function UpgradesProvider({ children }) {
     const upgrade = upgrades.get(upgradeID);
 
     if (!LoC.lt(upgrade.cost) && upgrade) {
+      soundManager.play("upgrade");
       dispatch({ type: "purchase", upgradeID: upgradeID });
       LoCDispatch({ type: "decrease", amount: upgrade.cost });
 

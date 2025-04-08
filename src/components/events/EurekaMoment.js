@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useLoCDispatch } from "../contexts/LoCContext";
 import { useLoCOnClick } from "../contexts/LoCOnClickContext";
 import Big from "big.js";
+import soundManager from "../../managers/SoundManager"
 import lightbulb from "../../assets/images/events/lightbulb.png";
 
 export default function EurekaMoment() {
@@ -56,6 +57,8 @@ export default function EurekaMoment() {
   };
 
   const handleClick = () => {
+    soundManager.play("eurekaMoment");
+    
     // Select a random text message
     const randomIndex = Math.floor(Math.random() * eurekaMomentTexts.length);
     setRandomEurekaMomentTextIndex(randomIndex);

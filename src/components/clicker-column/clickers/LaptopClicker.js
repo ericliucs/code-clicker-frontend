@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLoCDispatch } from "../../contexts/LoCContext";
 import { useLoCOnClick } from "../../contexts/LoCOnClickContext";
+import soundManager from "../../../managers/SoundManager";
 import laptopClickerImage from "../../../laptop-clicker.png";
 
 export default function LaptopClicker() {
@@ -21,9 +22,11 @@ export default function LaptopClicker() {
   }, [clickPopups]);
 
   const handleClick = (event) => {
+    soundManager.playWithRandomPitch('click', 0.8, 1.2);
+
     // Get click position relative to the target element
     const rect = event.currentTarget.getBoundingClientRect();
-    // Temporary random offsets while I fix this
+    // Calculate popup position
     const x = event.clientX - rect.left - 18;
     const y = event.clientY - rect.top - 30;
 
@@ -37,8 +40,7 @@ export default function LaptopClicker() {
     setClickPopups((popups) => [...popups, newPopup]);
     LoCDispatch({ type: "increase", amount: LoCPerClick });
   };
-
-  // Prevent dragging
+  
   const preventDrag = (e) => {
     e.preventDefault();
     return false;
