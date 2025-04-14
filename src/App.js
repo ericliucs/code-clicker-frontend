@@ -9,6 +9,7 @@ import PurchaseColumn from "./components/purchase-column/PurchaseColumn";
 
 import "./App.css";
 import EurekaMoment from "./components/events/EurekaMoment";
+import soundManager from "./managers/SoundManager";
 
 export default function App() {
   const LOC_PER_SECOND_DELAY_FACTOR = Big(0.1);
@@ -28,6 +29,17 @@ export default function App() {
     }, TICK_DELAY_MS);
     return () => clearInterval(interval);
   }, [LoCPerSecond]);
+  
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      soundManager.playMusic();
+    }, 500);
+
+    return () => {
+      clearTimeout(timeout);
+      soundManager.stopMusic();
+    };
+  }, []);
 
   return (
     <div id={"app"} className="flex w-full h-dvh font-inter text-[#eeeeee]">
