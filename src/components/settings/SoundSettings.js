@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import SoundManager from '../../managers/SoundManager';
+import { useState } from 'react';
+import soundManager from '../../managers/SoundManager';
 
 export default function SoundSettings() {
-  const [volume, setVolume] = useState(SoundManager.settings.volume);
-  const [enabled, setEnabled] = useState(SoundManager.settings.enabled);
+  const [volume, setVolume] = useState(soundManager.settings.volume);
+  const [enabled, setEnabled] = useState(soundManager.settings.enabled);
   
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
-    SoundManager.setVolume(newVolume);
+    soundManager.setVolume(newVolume);
   };
   
   const handleToggleSound = () => {
     const newEnabled = !enabled;
     setEnabled(newEnabled);
-    SoundManager.setEnabled(newEnabled);
+    soundManager.setEnabled(newEnabled);
   };
   
   const playTestSound = () => {
     if (enabled) {
-      SoundManager.play("eurekaMoment");
+      soundManager.play("eurekaMoment");
     }
   };
   
@@ -28,7 +28,7 @@ export default function SoundSettings() {
       <h3 className="text-lg font-bold mb-2">Sound Settings</h3>
       
       <div className="mb-4">
-        <label className="flex items-center cursor-pointer">
+        <label className="m-2 flex items-center cursor-pointer">
           <input 
             type="checkbox" 
             checked={enabled} 

@@ -19,6 +19,7 @@ export default function App() {
   const LoCPerSecond = useLoCPerSecond();
 
   useEffect(() => {
+    Big.PE = 1e+6;
     const interval = setInterval(() => {
       LoCDispatch({
         type: "increase",

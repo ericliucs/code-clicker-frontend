@@ -14,12 +14,12 @@ class SoundManager {
     this.sounds = {
       click: new Howl({
         src: [keyboardSound],
-        volume: 0.8,
+        volume: 0.7,
         preload: true
       }),
         eurekaMoment: new Howl({
         src: [eurekaMomentSound],
-        volume: 0.5,
+        volume: 0.7,
         preload: true
       }),
       upgrade: new Howl({
@@ -48,7 +48,9 @@ class SoundManager {
   }
 
   play(sound, rateVariation = null) {
-    if (!this.settings.enabled || !this.sounds[sound]) return;
+    if (!this.settings.enabled || !this.sounds[sound]) {
+      return;
+    }
 
     const currentSound = this.sounds[sound];
     
@@ -60,7 +62,9 @@ class SoundManager {
   }
 
   playWithRandomPitch(soundName, minRate = 0.7, maxRate = 1.3) {
-    if (!this.settings.enabled || !this.sounds[soundName]) return;
+    if (!this.settings.enabled || !this.sounds[soundName]) {
+      return;
+    }
 
     const pitchVariation = minRate + Math.random() * (maxRate - minRate);
     this.play(soundName, pitchVariation);
