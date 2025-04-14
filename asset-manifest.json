@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/code-clicker-frontend/static/css/main.7c31fe0b.css",
+    "main.css": "/code-clicker-frontend/static/css/main.8e832835.css",
     "main.js": "/code-clicker-frontend/static/js/main.04efb5be.js",
     "static/js/488.8cdf0e85.chunk.js": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js",
     "static/media/background-music.mp3": "/code-clicker-frontend/static/media/background-music.2794ffe51b875ead36c2.mp3",
-    "static/media/Inter.ttf": "/code-clicker-frontend/static/media/Inter.e05c5f3d1fa6a3893d84.ttf",
+    "static/media/GeistMono.ttf": "/code-clicker-frontend/static/media/GeistMono.532c2dfcd3168ac8bed0.ttf",
     "static/media/laptop-clicker.png": "/code-clicker-frontend/static/media/laptop-clicker.3e64702ad5d9bb183e10.png",
     "static/media/keyboard-click.mp3": "/code-clicker-frontend/static/media/keyboard-click.ddbb51cd5f26c3818bc0.mp3",
     "static/media/upgrade.mp3": "/code-clicker-frontend/static/media/upgrade.4b2c257b8d76fa1d63fa.mp3",
@@ -12,12 +12,12 @@
     "static/media/youtube-logo.png": "/code-clicker-frontend/static/media/youtube-logo.3d7d09a9f4fcd641de27.png",
     "static/media/typing-speed.png": "/code-clicker-frontend/static/media/typing-speed.4bb51e0f6f3e6be2ae7d.png",
     "index.html": "/code-clicker-frontend/index.html",
-    "main.7c31fe0b.css.map": "/code-clicker-frontend/static/css/main.7c31fe0b.css.map",
+    "main.8e832835.css.map": "/code-clicker-frontend/static/css/main.8e832835.css.map",
     "main.04efb5be.js.map": "/code-clicker-frontend/static/js/main.04efb5be.js.map",
     "488.8cdf0e85.chunk.js.map": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c31fe0b.css",
+    "static/css/main.8e832835.css",
     "static/js/main.04efb5be.js"
   ]
 }

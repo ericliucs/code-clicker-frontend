@@ -39,7 +39,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --font-inter: "Inter", sans-serif;
+    --font-geist: "Geist", sans-serif;
   }
 }
 @layer base {
@@ -202,9 +202,6 @@
   }
   .relative {
     position: relative;
-  }
-  .static {
-    position: static;
   }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
@@ -415,9 +412,6 @@
   .text-left {
     text-align: left;
   }
-  .font-inter {
-    font-family: var(--font-inter);
-  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -538,7 +532,7 @@
 }
 @font-face {
   font-family: "GeistMono";
-  src: url("../public/fonts/Inter.ttf");
+  src: url("../public/fonts/GeistMono.ttf");
 }
 .clicker {
   user-drag: none;
