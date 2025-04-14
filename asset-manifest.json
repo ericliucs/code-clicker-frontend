@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/code-clicker-frontend/static/css/main.8e832835.css",
-    "main.js": "/code-clicker-frontend/static/js/main.ec57f0d4.js",
+    "main.css": "/code-clicker-frontend/static/css/main.cfa507bd.css",
+    "main.js": "/code-clicker-frontend/static/js/main.d57c8c00.js",
     "static/js/488.8cdf0e85.chunk.js": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js",
     "static/media/background-music.mp3": "/code-clicker-frontend/static/media/background-music.2794ffe51b875ead36c2.mp3",
     "static/media/GeistMono.ttf": "/code-clicker-frontend/static/media/GeistMono.532c2dfcd3168ac8bed0.ttf",
@@ -12,12 +12,12 @@
     "static/media/youtube-logo.png": "/code-clicker-frontend/static/media/youtube-logo.3d7d09a9f4fcd641de27.png",
     "static/media/typing-speed.png": "/code-clicker-frontend/static/media/typing-speed.4bb51e0f6f3e6be2ae7d.png",
     "index.html": "/code-clicker-frontend/index.html",
-    "main.8e832835.css.map": "/code-clicker-frontend/static/css/main.8e832835.css.map",
-    "main.ec57f0d4.js.map": "/code-clicker-frontend/static/js/main.ec57f0d4.js.map",
+    "main.cfa507bd.css.map": "/code-clicker-frontend/static/css/main.cfa507bd.css.map",
+    "main.d57c8c00.js.map": "/code-clicker-frontend/static/js/main.d57c8c00.js.map",
     "488.8cdf0e85.chunk.js.map": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e832835.css",
-    "static/js/main.ec57f0d4.js"
+    "static/css/main.cfa507bd.css",
+    "static/js/main.d57c8c00.js"
   ]
 }
