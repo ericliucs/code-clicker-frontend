@@ -42,7 +42,7 @@ export default function App() {
   }, []);
 
   return (
-    <div id={"app"} className="flex w-full h-dvh font-inter text-[#eeeeee]">
+    <div id={"app"} className="flex w-full h-dvh font-geistmono text-[#eeeeee]">
       <DisplayColumn />
       <ClickerColumn LoC={LoC} LoCPerSecond={LoCPerSecond} />
       <PurchaseColumn />

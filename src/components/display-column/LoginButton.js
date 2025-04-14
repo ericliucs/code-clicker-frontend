@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { login, register } from "../../services/api";
+import eventService from "../../services/events";
 
 export default function LoginButton() {
   const [isModalShowing, setIsModalShowing] = useState(false);
@@ -28,7 +29,7 @@ export default function LoginButton() {
       setIsLoggedIn(true);
       setIsModalShowing(false);
 
-      window.location.reload(); // Just refreshes the app, I dunno how to do this better
+      eventService.publish('auth:login', response.data.user);
     } catch (err) {
       setError(err.response?.data?.error || "An error occurred");
     }
@@ -37,8 +38,10 @@ export default function LoginButton() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
+    
     setIsLoggedIn(false);
-    window.location.reload();
+    
+    eventService.publish('auth:logout');
   };
 
   return (

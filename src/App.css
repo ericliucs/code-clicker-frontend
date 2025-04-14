@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: "GeistMono";
-    src: url("../public/fonts/Inter.ttf");
+    src: url("../public/fonts/GeistMono.ttf");z
 }
 
 @theme {
-    --font-inter: "Inter", sans-serif;
+    --font-geistmono: "GeistMono", sans-serif;
 }
 
 .clicker {
