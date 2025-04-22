@@ -74,7 +74,7 @@ class SoundManager {
     currentSound.play();
   }
 
-  playWithRandomPitch(soundName, minRate = 0.7, maxRate = 1.3) {
+  playWithRandomPitch(soundName, minRate = 0.65, maxRate = 1.35) {
     if (!this.settings.enabled || !this.sounds[soundName]) {
       return;
     }

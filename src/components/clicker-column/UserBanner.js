@@ -32,7 +32,7 @@ export default function UserRepository() {
   if (!username) return null;
 
   return (
-    <h2 className="text-2xl text-blue-400 font-bold mt-4">
+    <h2 className="mt-4 p-4 text-2xl bg-slate-800/50 font-bold rounded-xl ">
       {`${username}'s repository`}
     </h2>
   );
