@@ -4,6 +4,7 @@ import { useUpgrades } from "../contexts/UpgradesContext";
 import { useGameVersion } from "../contexts/GameVersionContext";
 import { useLoCPerSecond } from "../contexts/LoCPerSecondContext";
 import { useLoCOnClick } from "../contexts/LoCOnClickContext";
+import { useBuildings } from "../contexts/BuildingsContext";
 import { saveGame } from "../../services/api";
 
 export default function SaveButton() {
@@ -12,13 +13,13 @@ export default function SaveButton() {
   const LoCPerSecond = useLoCPerSecond();
   const LoCOnClick = useLoCOnClick();
   const upgrades = useUpgrades();
+  const buildings = useBuildings();
 
   const [isModalShowing, setIsModalShowing] = useState(false);
   const [saveStatus, setSaveStatus] = useState("");
   const [saveError, setSaveError] = useState("");
 
   const handleSave = async () => {
-    // Check if user is logged in
     const token = localStorage.getItem("token");
     if (!token) {
       setSaveError("Please log in to save your game");
@@ -31,7 +32,6 @@ export default function SaveButton() {
       setSaveError("");
       setIsModalShowing(true);
 
-      // Convert upgrades Map to object for sending to server
       const upgradesArray = Array.from(upgrades.entries());
 
       await saveGame({
@@ -39,6 +39,7 @@ export default function SaveButton() {
         locPerSecond: LoCPerSecond.toString(),
         locPerClick: LoCOnClick.toString(),
         upgrades: upgradesArray,
+        buildings: buildings,
         gameVersion,
       });
 

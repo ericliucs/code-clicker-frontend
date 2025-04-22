@@ -4,12 +4,14 @@ import { useLoCOnClickDispatch } from "../contexts/LoCOnClickContext";
 import { useState } from "react";
 import { loadGame } from "../../services/api";
 import { useUpgradesDispatch } from "../contexts/UpgradesContext";
+import { useBuildingsDispatch } from "../contexts/BuildingsContext";
 
 export default function LoadButton() {
   const LoCDispatch = useLoCDispatch();
   const LoCPerSecondDispatch = useLoCPerSecondDispatch();
   const LoCOnClickDispatch = useLoCOnClickDispatch();
   const upgradesDispatch = useUpgradesDispatch();
+  const buildingsDispatch = useBuildingsDispatch();
 
   const [isModalShowing, setIsModalShowing] = useState(false);
   const [loadStatus, setLoadStatus] = useState("");
@@ -48,6 +50,11 @@ export default function LoadButton() {
       });
 
       upgradesDispatch.setAllUpgrades(saveData.upgrades);
+
+      // Load buildings if they exist in the save data
+      if (saveData.buildings) {
+        buildingsDispatch.setAllBuildings(saveData.buildings);
+      }
 
       setLoadStatus("Game loaded successfully!");
     } catch (err) {

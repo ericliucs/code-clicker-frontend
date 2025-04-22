@@ -1,11 +1,11 @@
 import UpgradeSection from "./upgrades/UpgradeSection";
-import HelpersSection from "./helpers/HelpersSection";
+import BuildingsSection from "./buildings/BuildingsSection";
 
 export default function PurchaseColumn() {
   return (
-    <div className={"basis-1/3"}>
+    <div className="basis-1/3">
       <UpgradeSection />
-      <HelpersSection />
+      <BuildingsSection />
     </div>
   );
 }

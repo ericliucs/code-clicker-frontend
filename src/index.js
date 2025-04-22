@@ -8,6 +8,7 @@ import { LoCProvider } from "./components/contexts/LoCContext";
 import { LoCPerSecondProvider } from "./components/contexts/LoCPerSecondContext";
 import { UpgradesProvider } from "./components/contexts/UpgradesContext";
 import { LoCOnClickProvider } from "./components/contexts/LoCOnClickContext";
+import { BuildingsProvider } from "./components/contexts/BuildingsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,7 +17,9 @@ root.render(
       <LoCOnClickProvider>
         <LoCPerSecondProvider>
           <UpgradesProvider>
-            <App />
+            <BuildingsProvider>
+              <App />
+            </BuildingsProvider>
           </UpgradesProvider>
         </LoCPerSecondProvider>
       </LoCOnClickProvider>
@@ -24,7 +27,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
