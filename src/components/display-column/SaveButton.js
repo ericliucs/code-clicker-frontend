@@ -32,14 +32,30 @@ export default function SaveButton() {
       setSaveError("");
       setIsModalShowing(true);
 
+      // Convert upgrades Map to array of entries
       const upgradesArray = Array.from(upgrades.entries());
+
+      // Convert buildings to a format that can be serialized safely
+      const serializedBuildings = buildings.map(building => ({
+        id: building.id,
+        name: building.name,
+        description: building.description,
+        basePrice: building.basePrice.toString(),
+        baseProduction: building.baseProduction.toString(),
+        count: building.count,
+        src: building.src,
+        alt: building.alt
+      }));
+
+      console.log("Serialized buildings:", serializedBuildings);
+      console.log("Upgrades array:", upgradesArray);
 
       await saveGame({
         loc: LoC.toString(),
         locPerSecond: LoCPerSecond.toString(),
         locPerClick: LoCOnClick.toString(),
         upgrades: upgradesArray,
-        buildings: buildings,
+        buildings: serializedBuildings,
         gameVersion,
       });
 

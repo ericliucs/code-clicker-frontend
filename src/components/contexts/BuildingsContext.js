@@ -101,6 +101,7 @@ export function BuildingsProvider({ children }) {
   }
 
   function setAllBuildings(buildingsData) {
+    console.log("setting buildings");
     dispatch({ type: "set", buildings: buildingsData });
   }
 

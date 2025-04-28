@@ -5,6 +5,7 @@ import { useState } from "react";
 import { loadGame } from "../../services/api";
 import { useUpgradesDispatch } from "../contexts/UpgradesContext";
 import { useBuildingsDispatch } from "../contexts/BuildingsContext";
+import Big from "big.js";
 
 export default function LoadButton() {
   const LoCDispatch = useLoCDispatch();
@@ -34,26 +35,42 @@ export default function LoadButton() {
       const response = await loadGame();
       const saveData = response.data;
 
+      console.log("Loaded save data:", saveData);
+
       LoCDispatch({
         type: "set",
-        amount: saveData.loc,
+        amount: Big(saveData.loc),
       });
 
       LoCPerSecondDispatch({
         type: "set",
-        amount: saveData.locPerSecond,
+        amount: Big(saveData.locPerSecond),
       });
 
       LoCOnClickDispatch({
         type: "set",
-        amount: saveData.locPerClick,
+        amount: Big(saveData.locPerClick),
       });
 
-      upgradesDispatch.setAllUpgrades(saveData.upgrades);
+      // Handle upgrades data
+      if (Array.isArray(saveData.upgrades)) {
+        upgradesDispatch.setAllUpgrades(saveData.upgrades);
+      } else {
+        console.error("Upgrades data is not an array:", saveData.upgrades);
+      }
 
-      // Load buildings if they exist in the save data
-      if (saveData.buildings) {
-        buildingsDispatch.setAllBuildings(saveData.buildings);
+      // Handle buildings data with proper conversion to Big.js
+      if (Array.isArray(saveData.buildings)) {
+        const convertedBuildings = saveData.buildings.map(building => ({
+          ...building,
+          basePrice: Big(building.basePrice || 0),
+          baseProduction: Big(building.baseProduction || 0)
+        }));
+
+        buildingsDispatch.setAllBuildings(convertedBuildings);
+        console.log("Converted buildings:", convertedBuildings);
+      } else {
+        console.error("Buildings data is not an array:", saveData.buildings);
       }
 
       setLoadStatus("Game loaded successfully!");
