@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/code-clicker-frontend/static/css/main.7774afff.css",
-    "main.js": "/code-clicker-frontend/static/js/main.d28eda15.js",
+    "main.js": "/code-clicker-frontend/static/js/main.84718001.js",
     "static/js/488.8cdf0e85.chunk.js": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js",
     "static/media/background-music.mp3": "/code-clicker-frontend/static/media/background-music.2794ffe51b875ead36c2.mp3",
     "static/media/GeistMono.ttf": "/code-clicker-frontend/static/media/GeistMono.532c2dfcd3168ac8bed0.ttf",
@@ -13,11 +13,11 @@
     "static/media/typing-speed.png": "/code-clicker-frontend/static/media/typing-speed.4bb51e0f6f3e6be2ae7d.png",
     "index.html": "/code-clicker-frontend/index.html",
     "main.7774afff.css.map": "/code-clicker-frontend/static/css/main.7774afff.css.map",
-    "main.d28eda15.js.map": "/code-clicker-frontend/static/js/main.d28eda15.js.map",
+    "main.84718001.js.map": "/code-clicker-frontend/static/js/main.84718001.js.map",
     "488.8cdf0e85.chunk.js.map": "/code-clicker-frontend/static/js/488.8cdf0e85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7774afff.css",
-    "static/js/main.d28eda15.js"
+    "static/js/main.84718001.js"
   ]
 }
